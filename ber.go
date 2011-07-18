@@ -383,7 +383,7 @@ func Encode( ClassType, TagType, Tag uint8, Value interface{}, Description strin
    p.Description = Description
 
 	if Value != nil {
-		v := reflect.NewValue(Value)
+		v := reflect.ValueOf(Value)
 
 		if ( ClassType == ClassUniversal ) {
 			switch Tag {
