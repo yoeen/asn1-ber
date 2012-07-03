@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"fmt"
    "io"
-   "os"
 	"reflect"
 )
 
@@ -167,7 +166,7 @@ func resizeBuffer( in []byte, new_size uint64 ) (out []byte) {
    return
 }
 
-func readBytes( reader io.Reader, buf []byte ) os.Error {
+func readBytes( reader io.Reader, buf []byte ) error {
    idx := 0
    buflen := len( buf )
    for idx < buflen {
@@ -180,7 +179,7 @@ func readBytes( reader io.Reader, buf []byte ) os.Error {
    return nil
 }
 
-func ReadPacket( reader io.Reader ) ( *Packet, os.Error) {
+func ReadPacket( reader io.Reader ) ( *Packet, error) {
    buf := make([]byte, 2)
    err := readBytes( reader, buf )
    if err != nil {
