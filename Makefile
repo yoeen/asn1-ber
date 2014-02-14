@@ -4,7 +4,7 @@
 
 include $(GOROOT)/src/Make.inc
 
-TARG=github.com/hsoj/asn1-ber
+TARG=github.com/yoeen/asn1-ber
 GOFILES=\
 	ber.go\
 

@@ -3,7 +3,7 @@ package ber
 import (
 	"bytes"
 	"fmt"
-   "io"
+	"io"
 	"reflect"
 )
 
